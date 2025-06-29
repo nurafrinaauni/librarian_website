@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Newknow - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', monospace;
+      background: #0e1e44;
+      color: #feffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    a { text-decoration: none; transition: 0.3s ease; }
+    input, textarea, button { font-family: inherit; }
+
+    header {
+      background: url('library-bg.png') no-repeat center center/cover;
+      text-align: center;
+      padding: 4rem 1rem;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    header h1 { font-size: 3.2rem; color: #fff; letter-spacing: 1.2px; }
+    header p { font-size: 1.5rem; font-style: italic; color: #fff; }
+    header img { width: 120px; margin-bottom: 30px; }
+
+    nav {
+      background: #2751ce;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+    nav a { font-weight: 600; font-style: italic; color: #dce7f7; font-size: 1rem; }
+    nav a:hover { color: #3b82f6; }
+
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px #3b82f6aa;
+      display: none;
+    }
+    section h2 {
+      color: #3b82f6;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 0.4rem;
+      text-align: center;
+    }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #3b82f6;
+    }
+    .profile h3 { margin: 0; font-size: 1.5rem; color: #f8fafc; }
+
+    input, textarea {
+      padding: 0.7rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+      background-color: #334155;
+      color: #f1f5f9;
+    }
+    textarea { height: 120px; resize: vertical; }
+    label { font-weight: 600; margin-top: 1rem; display: block; }
+
+    button {
+      background-color: #3b82f6;
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    button:hover { background-color: #2563eb; }
+
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+    .fade-in.show { opacity: 1; transform: translateY(0); }
+
+    .projects-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .project-box {
+      background-color: #334155;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 300px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .project-box:hover {
+      transform: scale(1.03);
+      background-color: #3b4e6a;
+    }
+    .project-box img {
+      width: 60px;
+      margin-bottom: 0.5rem;
+    }
+    
+    footer {
+      background: #1e293b;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="NeoKnow Logo">
+    <h1>Newknow</h1>
+    <p>Expert in Digital Knowledge Management Services</p>
+  </header>
+
+  <nav>
+    <a href="#home"><i class="fas fa-home"></i> Home</a>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#services"><i class="fas fa-briefcase"></i> Services</a>
+    <a href="#projects"><i class="fas fa-folder-open"></i> My Projects</a>
+    <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+
+  <main>
+    <section id="home" class="fade-in">
+      <h2>Welcome</h2>
+      <p>Welcome to Newknow! Explore my librarian profile website.</p>
+      <div style="margin-top: 1rem; background-color: #192c4d; padding: 1rem 1.2rem; border-left: 6px solid #3b82f6; border-radius: 8px;">
+        <h3 style="color: #93c5fd;">🌟 Why Choose Newknow?</h3>
+        <ul style="margin-top: 0.5rem;">
+          <li>📁 Customized metadata & information structure for institutions</li>
+          <li>🧠 Digital preservation methods that ensure long-term access</li>
+          <li>🛠️ Tools and systems to empower librarians and researchers</li>
+        </ul>
+      </div>
+      <div style="margin-top: 1.5rem; background-color: #192c4d; padding: 1rem 1.2rem; border-left: 6px solid #60a5fa; border-radius: 8px;">
+        <h3 style="color: #bfdbfe;">🔍 What You’ll Discover:</h3>
+        <ul style="margin-top: 0.5rem;">
+           <li>📚 Knowledge base building and digital cataloging strategies</li>
+           <li>🧭 Guidance on organizing digital archives and e-resources</li>
+           <li>📊 Analysis tools to understand user access and content performance</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <div class="profile">
+        <img src="afrina-profile.jpg" alt="Afrina Auni" class="profile-img">
+        <div>
+          <h3>Nur Afrina Auni</h3>
+          <p>Professional Librarian | Digital Knowledge Management</p>
+        </div>
+      </div>
+      <p>I am a professional librarian specializing in digital knowledge management. I help organizations build, organize, and maintain efficient and accessible digital knowledge systems.</p>
+      <p>My goal is to support knowledge sharing in a way that is meaningful, ethical, and sustainable — ensuring information can continue to educate and inspire future generations.</p>
+      <h3>Key Skills</h3>
+      <ul>
+        <li>Digital Archiving & Preservation</li>
+        <li>Metadata Management</li>
+        <li>Information Organization & Cataloging</li>
+        <li>Library Management Systems (LMS)</li>
+      </ul>
+    </section>
+
+    <section id="services" class="fade-in">
+      <h2>My Services</h2>
+      <ul>
+        <li><strong>📁</strong> Digital Content Organization</li>
+        <p>Helping you structure and tag digital content effectively to improve accessibility and retrieval.</p>
+        <li><strong>📚</strong> Knowledge Base Management</li>
+        <p>Creating well-organized internal knowledge libraries tailored to your organization’s needs.</p>
+        <li><strong>🧭</strong> Information Architecture</li>
+        <p>Designing intuitive systems for users to navigate and discover information seamlessly.</p>
+        <li><strong>📊</strong> Knowledge Analytics</li>
+        <p>Analyzing access patterns and usage data to refine content strategy and system design.</p>
+        <li><strong>🤝</strong> Collaboration Support</li>
+        <p>Implementing platforms that allow smooth collaboration and knowledge sharing among teams.</p>
+      </ul>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <h2>📂 My Projects</h2>
+        <div class="projects-container">
+
+        <div class="project-box" onclick="toggleDetails('p1')">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149635.png" alt="AI Icon">
+        <h3>AI Metadata Classifier</h3>
+        <div id="p1" class="project-details">
+          <p>Built an AI model for a university library using Dublin Core metadata standards.</p>
+        </div>
+      </div>
+
+      <div class="project-box" onclick="toggleDetails('p2')">
+        <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" alt="Archive">
+        <h3>Digital Archive System</h3>
+        <div id="p3" class="project-details">
+          <p>Digitized and preserved using open archival standards and a secure cloud system.</p>
+        </div>
+      </div>
+
+      <div class="project-box" onclick="toggleDetails('p3')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3771/3771392.png" alt="Catalog">
+        <h3>E-Resource Catalog Builder</h3>
+        <div id="p4" class="project-details">
+          <p>Created a digital catalog of educational materials for an online learning platform, improving resource discoverability.</p>
+        </div>
+      </div>
+
+    </div>
+    </section>
+
+    <section id="faq" class="fade-in">
+      <h2>❓ Frequently Asked Questions</h2>
+      <ul>
+        <li><strong>What is Digital Knowledge Management?</strong><br>It is the practice of organizing, preserving, and providing access to digital content effectively.</li>
+        <li><strong>Who can benefit from this website?</strong><br>Students, librarians, educators, researchers, and digital content managers.</li>
+        <li><strong>Is Newknow a personal project?</strong><br>Yes, this website is developed by a professional librarian to support digital knowledge development.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name</label>
+        <input id="name" type="text" required>
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="activity-box" style="margin-top: 2rem;">
+        <h3>📧 Contact Details</h3>
+        <ul>
+          <li><strong>Email:</strong> newknow@gmail.com</li>
+          <li><strong>Phone:</strong> +6012-543876</li>
+          <li><strong>Instagram:</strong> @afrina_nii</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chatbot Floating Icon -->
+  <div id="chatbot-icon" style="position: fixed; bottom: 30px; right: 30px; background-color: #3b82f6; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; box-shadow: 0 4px 12px rgba(0,0,0,0.4);" onclick="toggleChatbot()">
+    <i class="fas fa-comment-alt" style="font-size: 24px;"></i>
+  </div>
+
+  <!-- Chatbot Window -->
+  <div id="chatbox" style="position: fixed; bottom: 100px; right: 30px; width: 320px; background-color: #1e293b; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.6); padding: 1rem; display: none; z-index: 10000; color: white;">
+    <h4 style="display: flex; justify-content: space-between; align-items: center; color: #3b82f6;">
+      🤖 Ask Newknow
+      <i class="fas fa-trash" title="Clear chat" style="cursor: pointer; color: #ef4444;" onclick="clearChat()"></i>
+    </h4>
+
+    <div id="chat-messages" style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; max-height: 200px; overflow-y: auto; font-size: 0.9rem;"></div>
+
+    <div id="chat-input" style="display: flex; margin-top: 1rem; gap: 0.3rem;">
+      <input type="text" id="userInput" placeholder="Ask something..." style="flex: 1; padding: 0.5rem; border-radius: 8px; border: none; background-color: #334155; color: white;" />
+      <button onclick="sendChat()" style="padding: 0.5rem 0.8rem; background-color: #3b82f6; color: white; border: none; border-radius: 8px; cursor: pointer;">Send</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2024 Newknow - Digital Knowledge Management Librarian
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+
+    const sections = document.querySelectorAll('main > section');
+    const navLinks = document.querySelectorAll('nav a');
+    function showSection(id) {
+      sections.forEach(section => {
+        section.style.display = (section.id === id) ? 'block' : 'none';
+      });
+    }
+    showSection('home');
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.getAttribute('href').substring(1);
+        showSection(id);
+      });
+    });
+
+    // Chatbot functions
+    const chatbotIcon = document.getElementById("chatbot-icon");
+    const chatbox = document.getElementById("chatbox");
+    const chatMessages = document.getElementById("chat-messages");
+
+    function toggleChatbot() {
+      chatbox.style.display = chatbox.style.display === "none" ? "block" : "none";
+    }
+
+    function sendChat() {
+      const userInput = document.getElementById("userInput");
+      const message = userInput.value.trim();
+      if (message === "") return;
+
+      appendMessage("🧑‍💼", message);
+      userInput.value = "";
+
+      const response = getBotResponse(message);
+      setTimeout(() => {
+        appendMessage("🤖", response);
+      }, 600);
+    }
+
+    function appendMessage(sender, text) {
+      const msg = document.createElement("div");
+      msg.textContent = `${sender} ${text}`;
+      chatMessages.appendChild(msg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function clearChat() {
+      chatMessages.innerHTML = "";
+    }
+
+    function getBotResponse(input) {
+      input = input.toLowerCase();
+      if (input.includes("hello")) return "hello, how can i help you?";
+      if (input.includes("help") || input.includes("game")) return "what do you want to know about this website?";
+      if (input.includes("how do i contact you?")) return "You can reach us through the Contact section or email newknow@gmail.com.";
+      return "I'm here to assist with digital knowledge and library services!";
+    }
+    function toggleDetails(id) {
+     const element = document.getElementById(id);
+     element.style.display = (element.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
+
+
